@@ -13,6 +13,9 @@ TARGET := $(BIN_DIR)/app
 # Flags
 CXXFLAGS := -std=c++23 -Wall -Wextra -I$(INC_DIR)
 
+# Bibliotecas necessárias para Crow
+LDFLAGS := -lpthread
+
 # Coleta todos os .cpp de src/
 SRCS := $(wildcard $(SRC_DIR)/*.cpp)
 
@@ -30,7 +33,7 @@ $(TARGET): $(OBJS)
 # Compilação dos .cpp para .o
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@ $(LDFLAGS)
 
 # Limpeza dos binários e objetos
 clean:
