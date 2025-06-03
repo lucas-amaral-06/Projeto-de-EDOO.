@@ -18,6 +18,7 @@ int main(){
             - Diagnósticos.
     */
 
+    cout << "Olá, mundo!" << endl;
     Paciente Lucas("Lucas", 18, "08937100592", "77991670521", "lukasbritoamaral007@gmail.com", "09/07/2006", "Masculino", {"Hipotireoidismo", "Nanismo"});
 
     return 0;
