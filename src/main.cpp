@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Paciente.h"
-#include "crow_all.h"
+#include "crow.h"
 
 using namespace std;
 
@@ -26,7 +26,7 @@ int main(){
     });
 
     CROW_ROUTE(app, "/hello/<string>")([](std::string name){
-        return "Olá, " + name + "!";
+        return "Ola, " + name + "!";
     });
 
     app.port(18080).multithreaded().run();
