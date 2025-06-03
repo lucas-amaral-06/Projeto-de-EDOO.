@@ -3,6 +3,7 @@
 #include <string>
 
 // Método construtor da classe.
+
 Paciente::Paciente(const std::string& nome, 
                    uint8_t idade, 
                    const std::string& cpf, 
@@ -11,6 +12,9 @@ Paciente::Paciente(const std::string& nome,
                    const std::string& data_nascimento,
                    const std::string& genero,
                    const std::vector<std::string>& diagnosticos){
+
+    //Inicializando os atributos do objeto.
+
     this->nome = nome;
     this->idade = idade;
     this->cpf = cpf;
@@ -20,4 +24,3 @@ Paciente::Paciente(const std::string& nome,
     this->genero = genero;
     this->diagnosticos = diagnosticos;
 }
-

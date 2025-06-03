@@ -20,7 +20,7 @@ class Paciente {
                 const std::vector<std::string>& diagnosticos
         );
 
-        // Getters.
+        // Getters (funções para captar os atributos).
 
         const std::string& getNome() const { return nome; }
         uint8_t getIdade() const { return idade; }
@@ -32,6 +32,8 @@ class Paciente {
         const std::vector<std::string>& getDiagnosticos() const { return diagnosticos; }
 
     private:
+
+        // Atributos sobre o usuário.
 
         std::string nome;
         uint8_t idade;
